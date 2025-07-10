@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Pokémon Battle</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- =======================================================
+  * Project Name: Mini Pokémon Battle
+  * Updated: 10 Juli 2025
+  * Author: Martin Hidayat Rihwan
+  * Github: https://github.com/Martin-020
+  ======================================================== -->
+</head>
+<body>
+  <div class="container">
+
+    <div id="choose-screen" class="screen">
+      <h1>Pilih Bola Pokémon</h1>
+      <div class="pokeballs">
+        <img src="https://img.icons8.com/color/96/000000/pokeball--v1.png" onclick="selectPokemon()" />
+        <img src="https://img.icons8.com/color/96/000000/pokeball--v1.png" onclick="selectPokemon()" />
+        <img src="https://img.icons8.com/color/96/000000/pokeball--v1.png" onclick="selectPokemon()" />
+      </div>
+    </div>
+
+    <div id="battle-screen" class="screen hidden">
+      <h1>⚔️ Battle Dimulai!</h1>
+      <div class="battlefield">
+        <div class="pokemon player">
+          <h2 id="player-name"></h2>
+          <img id="player-img" />
+          <p>HP: <span id="player-hp">100</span></p>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="pokemon enemy">
+          <h2 id="enemy-name"></h2>
+          <img id="enemy-img" />
+          <p>HP: <span id="enemy-hp">100</span></p>
+        </div>
+      </div>
+
+      <div class="skills">
+        <button onclick="useSkill(0)"></button>
+        <button onclick="useSkill(1)"></button>
+        <button onclick="useSkill(2)"></button>
+        <button onclick="useSkill(3)"></button>
+      </div>
+
+      <p id="log"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
